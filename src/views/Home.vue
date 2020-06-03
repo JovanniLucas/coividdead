@@ -2,19 +2,27 @@
   <div class="home-view">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-card-group deck class="mb-4">
-        <b-card title="Result">{{form}}</b-card>
+        <b-card title="Result">{{ form }}</b-card>
         <b-card title="Covid's probability of death calculator">
           <b-row>
             <b-col sm="12">
               <!--Gender -->
               <b-form-group label="Gender:">
-                <b-form-select v-model="form.Features[0].SEXO" :options="gender" required></b-form-select>
+                <b-form-select
+                  v-model="form.Features[0].SEXO"
+                  :options="gender"
+                  required
+                ></b-form-select>
               </b-form-group>
             </b-col>
             <b-col ms="12">
               <!--Age -->
               <b-form-group label="Age:">
-                <b-form-input type="number" v-model="form.Features[0].EDAD" required />
+                <b-form-input
+                  type="number"
+                  v-model="form.Features[0].EDAD"
+                  required
+                />
               </b-form-group>
             </b-col>
           </b-row>
